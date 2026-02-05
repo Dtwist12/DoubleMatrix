@@ -69,6 +69,19 @@ public boolean isDiagonalSame(DoubleMatrix another){
     }
     return true;
 }
+
+//this method will rotate the matrix so for example if the matrix is 1 2 3
+// it will become 3 2 1 
+
+public DoubleMatrix rotateClockwise90(){
+    DoubleMatrix result = new DoubleMatrix (getElements()[0].length, getNumberOfRows());
+    for (int i = 0; i < getNumberOfRows(); i++){
+        for (int j = 0; j < getElements()[0].length; j++){
+            result.getElements()[j][getNumberOfRows() - 1 - i] = this.getElements()[i][j];
+        }
+    }
+    return result;
+}
 }
 
 

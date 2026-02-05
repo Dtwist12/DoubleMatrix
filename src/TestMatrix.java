@@ -25,12 +25,20 @@ public class TestMatrix {
         third.getElements()[1] = new double[]{4.4,5.5,6.6};
         third.getElements()[2] = new double[]{7.7,8.8,9.9};
         third.print();
-        if(matrixA.isDiagonalSame(matrixB)){
+        fourth.getElements()[0] = new double[]{1.1,2.2,3.3};
+        fourth.getElements()[1] = new double[]{4.4,5.5,6.6};
+        fourth.getElements()[2] = new double[]{7.7,8.8,9.9};
+        fourth.print();
+        if(third.isDiagonalSame(fourth)){
             System.out.println("The diagonal elements are the same.");
         }
         else {
             System.out.println("The diagonal elements are not the same.");
         }
+
+        DoubleMatrix rotated = third.rotateClockwise90();
+        rotated.print();
+        
         
     }
 }
